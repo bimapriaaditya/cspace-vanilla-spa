@@ -18,5 +18,11 @@
   "homepage": "https://github.com/bimapriaaditya/cspace-vanilla-spa#readme",
   "dependencies": {
     "vanilla-router": "^1.2.8"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-transform-react-jsx": "^7.20.7",
+    "webpack": "^5.75.0"
   }
 }
