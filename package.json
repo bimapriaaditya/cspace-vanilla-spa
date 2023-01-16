@@ -4,7 +4,8 @@
   "description": "Aplikasi latihan Single Page Applications (SPA) menggunakan vanilla js, based on github codespace",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,12 +18,17 @@
   },
   "homepage": "https://github.com/bimapriaaditya/cspace-vanilla-spa#readme",
   "dependencies": {
+    "preact": "^10.11.3",
     "vanilla-router": "^1.2.8"
   },
   "devDependencies": {
     "@babel/cli": "^7.20.7",
     "@babel/core": "^7.20.12",
     "@babel/plugin-transform-react-jsx": "^7.20.7",
-    "webpack": "^5.75.0"
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "jsx-runtime": "^1.2.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   }
 }

@@ -1,14 +1,28 @@
-import Button from 'components/Button.jsx'
+import { render, h } from 'preact';
+import { useState } from 'preact/hooks';
+/** @jsx h */
 
-const App = () => (
-  <div>
-    <Button onClick={() => alert(1)}>Click 11</Button>
-    <Button onClick={() => alert(2)}>Click 12</Button>
-    <Button onClick={() => alert(3)}>Click 13</Button>
-  </div>
-);
+const App = () => {
+  const [input, setInput] = useState('BimaPria');
+  
+  const ChangeBima = (e) => {
+    const new_val = e.target.value;
+    setInput(new_val);
 
-const rootElement = document.getElementById("root");
-rootElement.appendChild(<App />);
+    console.log(new_val);
+  };
 
-export default App;
+  const CheckInput = (e) => {
+    console.log(input);
+  };
+
+	return (
+		<div>
+			<p className='bg-danger' style={'color: red;'}>Bima Pria Aditya</p>
+			<input value={input} onInput={ChangeBima} />
+      <button type='button' onClick={CheckInput}>Click Me</button>
+		</div>
+	)
+}
+
+render(<App />, document.body);

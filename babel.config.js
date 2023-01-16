@@ -1,8 +1,10 @@
-const presets = [];
+const presets = [
+  "@babel/preset-env"
+];
+
 const plugins = [
   [
     "@babel/plugin-transform-react-jsx",
-    { runtime: "automatic", importSource: "./core" },
   ],
 ];
 
